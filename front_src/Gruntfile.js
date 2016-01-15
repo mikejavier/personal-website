@@ -2,10 +2,10 @@
 
 module.exports = function( grunt ) {
 	// Definição dos arquivos js
-	var filesJS = ['bower_components/modernizr/modernizr.js', 'bower_components/waves/src/js/waves.js','src/js/**/*'];
+	var filesJS = ['bower_components/jquery/dist/jquery.js', 'bower_components/modernizr/modernizr.js', 'bower_components/waves/dist/waves.js','src/js/**/*'];
 	// Definição dos arquivos css
 	var sassconcat = ['bower_components/normalize-css/normalize.css', 'src/css/sprite/sprite.css','src/css/main_sass.css'];
-	var postcssconcat = ['bower_components/normalize-css/normalize.css', 'src/css/sprite/sprite.css','src/css/main_postcss.css'];
+	var postcssconcat = ['bower_components/normalize-css/normalize.css', 'src/css/sprite/sprite.css', 'src/css/main_postcss.css'];
 
 	// Load all tasks
 	require('time-grunt')(grunt);
@@ -171,7 +171,7 @@ module.exports = function( grunt ) {
 
                 // Integrando com a tarefa "watch"
                 watchTask: true,
-                proxy: "localhost:8888/devframework",
+                proxy: "localhost:8888/mike_github",
 
 
                 // Sincronizando os eventos entre os dispositívos

@@ -1,0 +1,28 @@
+// .paginator{
+// 	@include clearfix();
+// 	width: 100%;
+// 	display: block;
+// 	clear: both;
+// 	text-align: center;
+
+// 	ul{
+// 		@include column(6);
+// 		text-align: right;
+
+// 		li{
+// 			display: inline-block;
+// 			a{
+// 				font-size: .9rem;
+// 			}
+// 		}
+// 	}
+
+// 	.visualizacao{
+// 		@include column(6);
+// 		text-align: left;
+
+// 		.itens{
+
+// 		}
+// 	}
+// }

@@ -15,6 +15,8 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="dist/css/styles.combined.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
         <!-- HUMANS -->
         <link type="text/plain" rel="author" href="humans.txt" />
@@ -26,32 +28,40 @@
         <meta property='og:image' content='http://url-do-site/img/img-og-facebook-200x200.png'/>
         <meta property='og:type' content='website' />
         <meta property='og:site_name' content='Nome do site' />
+
     </head>
     <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
     <header class="about">
         <div class="wrap">
-            <img src="dist/images/ms.png"  alt="Michael Santillán Avatar" class="about-avatar">
-            <h1 class="about-name">Michael Santillán</h1>
-            <h2 class="about-role">Front-End Developer</h2>
-            <div class="social-icons">
-                <a href="http://www.facebook.com/zmike.javier" target="_blank" class="social-icons-link"><i class="fa fa-facebook md-effect-light"></i></a>
-                <a href="http://www.twitter.com/zmiike" target="_blank" class="social-icons-link"><i class="fa fa-twitter md-effect-light"></i></a>
-                <a href="http://br.linkedin.com/in/mikejavier/" target="_blank" class="social-icons-link"><i class="fa fa-linkedin md-effect-light"></i></a>
-                <a href="https://github.com/mikejavier" target="_blank" class="social-icons-link"><i class="fa fa-github md-effect-light"></i></a>
+            <div class="about-content">
+                <img src="dist/images/ms.png"  alt="Michael Santillán Avatar" class="about-avatar">
+                <h1 class="about-name">Michael Santillán</h1>
+                <h2 class="about-role">Front-End Developer</h2>
+                <div class="social-icons">
+                    <a href="http://www.facebook.com/zmike.javier" target="_blank" class="social-icons-link"><i class="fa fa-facebook md-effect-light"></i></a>
+                    <a href="http://www.twitter.com/zmiike" target="_blank" class="social-icons-link"><i class="fa fa-twitter md-effect-light"></i></a>
+                    <a href="http://br.linkedin.com/in/mikejavier/" target="_blank" class="social-icons-link"><i class="fa fa-linkedin md-effect-light"></i></a>
+                    <a href="https://github.com/mikejavier" target="_blank" class="social-icons-link"><i class="fa fa-github md-effect-light"></i></a>
+                </div>
+                <a target="_blank" href="https://docs.google.com/document/d/1Ay3gMvsL_Oqv9HQm3iH3mjO5vU0vNCQe4KvD7ewx4EA/edit?usp=sharing" class="raised-button md-effect-light">download <i class="fa fa-download"></i> curriculum</a>
             </div>
-            <a target="_blank" href="https://docs.google.com/document/d/1Ay3gMvsL_Oqv9HQm3iH3mjO5vU0vNCQe4KvD7ewx4EA/edit?usp=sharing" class="raised-button md-effect-light">download <i class="fa fa-download"></i> curriculum</a>
         </div>
     </header>
 
-        <main class="portfolio wrap">
-            <div class="section-title">
-                <h1><i class="fa fa-suitcase"></i> portfolio</h1>
-            </div>
+        <main>
+
+            <section class="portfolio wrap">
+                <div class="section-title">
+                    <h1><i class="fa fa-lightbulb-o"></i> projetos</h1>
+                </div>
+
+                <div class="wrap" data-inject="true"></div>
+            </section>
+
         </main>
 
 
@@ -69,10 +79,10 @@
 
             <nav class="menu">
                 <ul>
-                    <li class="menu-item"><a  class="menu-link md-effect" href="<?php echo get_settings('home'); ?>"><i class="fa fa-user"></i> Sobre</a></li>
-                    <li class="menu-item"><a  class="menu-link md-effect" href="<?php echo get_settings('home'); ?>"><i class="fa fa-suitcase"></i> Portfolio</a></li>
-                    <li class="menu-item"><a  class="menu-link md-effect" href="https://mikejavier.github.io/"><i class="fa fa-lightbulb-o"></i> Projetos</a></li>
-                    <li class="menu-item"><a  class="menu-link md-effect" href="<?php echo get_settings('home'); ?>/blog"><i class="fa fa-pencil"></i> Blog</a></li>
+                    <li class="menu-item"><a  class="menu-link md-effect" href="index.html"><i class="fa fa-user"></i> Sobre</a></li>
+                    <li class="menu-item"><a  class="menu-link md-effect" href="portfolio.html"><i class="fa fa-suitcase"></i> Portfolio</a></li>
+                    <li class="menu-item"><a  class="menu-link md-effect" href="projects.html"><i class="fa fa-lightbulb-o"></i> Projetos</a></li>
+                    <li class="menu-item"><a  class="menu-link md-effect" href="https://medium.com/@mikejavier" target="_blank"><i class="fa fa-pencil"></i> Blog</a></li>
                     <li class="menu-item"><a  class="menu-link md-effect" href="mailto:contato@michaelsantillan.com"><i class="fa fa-envelope"></i> Contato</a></li>
                 </ul>
             </nav>
@@ -92,34 +102,6 @@
         <!-- JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="dist/js/scripts.combined.min.js" async ></script>
-        <script>
-            jQuery(document).ready(function($) {
-                $.ajax({
-                    url: 'https://api.github.com/users/mikejavier/repos',
-                    type: 'GET'
-                })
-                .done(function(data) {
-                    for (var i = 0; i < data.length; i++) {
-                        $('.portfolio').append(
-                            '<article class="card-item">'+
-                                '<h1 class="projeto-item-title">' + data[i].name + '</h1>'+
-                                '<p class="projeto-item-excerpt">' + data[i].description + '</p>'+
-                                '<div class="projeto-item-action">'+
-                                    '<a href="' + data[i].html_url + '" class="flat-button md-effect-color">Ver Projeto</a>'+
-                                '</div>'+
-                            '</article>'
-                        );
-                    };
-
-                    Waves.init();
-                    Waves.attach('.md-effect-light',['waves-light']);
-                    Waves.attach('.md-effect-color',['waves-color']);
-                })
-                .fail(function() {
-                    console.log("error");
-                });
-            });
-        </script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

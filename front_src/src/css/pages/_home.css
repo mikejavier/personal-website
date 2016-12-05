@@ -160,12 +160,14 @@
 			padding-left: 1rem;
 			padding-right: 1rem;
 			color: $color-grey-dark;
+            min-height: 7.5rem;
 		}
 		.projeto-item-excerpt{
 			padding-left: 1rem;
 			padding-right: 1rem;
 			font-size: 1.6rem;
 			color: $color-grey;
+            min-height: 6rem;
 		}
 		.projeto-item-action{
 			border-top: 1px solid #ddd;

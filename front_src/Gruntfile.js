@@ -3,10 +3,10 @@
 module.exports = function( grunt ) {
 
 	// Definição dos arquivos js
-	var filesJS = ['src/js/main.js']
+	var filesJS = ['node_modules/node-waves/dist/waves.js', '../dist/js/scripts.combined.min.js']
 
 	// Definição dos arquivos css
-	var postcssconcat = ['node_modules/normalize.css/normalize.css', 'src/tmp/css/sprite/sprite.css','src/tmp/css/main_postcss.css']
+	var postcssconcat = ['node_modules/normalize.css/normalize.css', 'node_modules/node-waves/dist/waves.css', 'src/tmp/css/sprite/sprite.css','src/tmp/css/main_postcss.css']
 
 	// Load all tasks
 	require('time-grunt')(grunt)
@@ -25,7 +25,7 @@ module.exports = function( grunt ) {
 
 			js: {
 				files: 'src/js/**/*',
-				tasks: ['browserify']
+				tasks: ['browserify', 'concat:js']
 			},
 
 			jade: {
@@ -206,7 +206,7 @@ module.exports = function( grunt ) {
 		browserify: {
 			dist: {
 				files: {
-					'../dist/js/scripts.combined.min.js': filesJS
+					'../dist/js/scripts.combined.min.js': 'src/js/main.js'
 				},
 				options: {
 					'transform': [ ['babelify', { 'presets': ['es2015'] }] ]

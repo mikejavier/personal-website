@@ -1,10 +1,10 @@
 jQuery(document).ready(function($) {
 
     // Inicia o waves effect
-    // Waves.init();
-    // Waves.attach('.md-effect');
-    // Waves.attach('.md-effect-light',['waves-light']);
-    // Waves.attach('.md-effect-color',['waves-color']);
+    Waves.init();
+    Waves.attach('.md-effect');
+    Waves.attach('.md-effect-light',['waves-light']);
+    Waves.attach('.md-effect-color',['waves-color']);
 
     $.ajax({
         url: 'https://api.github.com/users/mikejavier/repos',
@@ -23,9 +23,9 @@ jQuery(document).ready(function($) {
             );
         };
 
-        // Waves.init();
-        // Waves.attach('.md-effect-light',['waves-light']);
-        // Waves.attach('.md-effect-color',['waves-color']);
+        Waves.init();
+        Waves.attach('.md-effect-light',['waves-light']);
+        Waves.attach('.md-effect-color',['waves-color']);
     })
     .fail(function() {
         console.log("error");

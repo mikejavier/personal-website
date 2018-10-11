@@ -15,7 +15,6 @@
     "dependencies": {
         "axios": "^0.16.2",
         "bulma": "^0.5.3",
-        "lost": "^8.2.1",
         "node-sass": "^4.9.0",
         "nuxt": "^1.4.0",
         "sass-loader": "^6.0.7"

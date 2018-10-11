@@ -13,7 +13,6 @@
         "precommit": "npm run lint"
     },
     "dependencies": {
-        "axios": "^0.16.2",
         "bulma": "^0.7.1",
         "node-sass": "^4.9.0",
         "nuxt": "^2.1.0",

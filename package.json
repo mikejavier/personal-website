@@ -16,7 +16,7 @@
         "axios": "^0.16.2",
         "bulma": "^0.5.3",
         "node-sass": "^4.9.0",
-        "nuxt": "^1.4.0",
+        "nuxt": "^2.1.0",
         "sass-loader": "^6.0.7"
     },
     "devDependencies": {

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h1 class="title">Articles</h1>
+    <h1 class="title">Blog</h1>
     <p>
       When inspired I write and put everything on my
       <a

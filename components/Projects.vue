@@ -10,17 +10,13 @@
       target="_blank">
         {{ repo.name + getDot(index) }}
       </a>
-      Also turning crazy ideas into code
+      Also turning crazy
       <a
-      href="https://github.com/mikejavier/correiosjs"
+      href="https://github.com/mikejavier/ideas"
       target="_blank">
-        correiosjs,
+        ideas
       </a>
-      <a
-      href="https://github.com/mikejavier/vue-emojiarea"
-      target="_blank">
-        vue-emojiarea.
-      </a>
+      into code.
       You can find more on
       <a
         href="https://github.com/mikejavier?tab=repositories"

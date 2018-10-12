@@ -39,7 +39,8 @@ module.exports = {
       { rel: 'icon', type: 'image/png', href: '/favicons/favicon-16x16.png?v=m2lnn8L340', size: '16x16' },
       { rel: 'manifest', href: '/manifest.json?v=m2lnn8L340' },
       { rel: 'canonical', href: 'https://www.michaelsantillan.com' },
-      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity: 'sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin: 'anonymous' }
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity: 'sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin: 'anonymous' },
+      { rel: 'stylesheet', href: 'https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css' }
     ]
   },
   /*

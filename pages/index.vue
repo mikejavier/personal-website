@@ -1,6 +1,6 @@
 <template>
   <section>
-    <ms-header></ms-header>
+    <app-header></app-header>
     <main>
       <about></about>
       <skills></skills>

@@ -1,7 +1,13 @@
 ---
-type: teste
-language: es
 title: teste de blog
+category: javascript
+language: es
+tags:
+  - vue
+  - nuxt
+  - bulma
+  - markdown
+thumbnail: /images/uploads/604342-ubuntu-dark-wallpaper-1920x1200-windows-7.jpg
 summary: >-
   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -11,8 +17,6 @@ summary: >-
   the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
 date: 2019-08-13T03:05:23.975Z
 update: 2019-08-13T03:05:24.007Z
-author: mikejavier
-thumbnail: /images/uploads/604342-ubuntu-dark-wallpaper-1920x1200-windows-7.jpg
 ---
 ![texto alternativo](/images/uploads/604342-ubuntu-dark-wallpaper-1920x1200-windows-7.jpg "aqui o titulo da imagem")
 

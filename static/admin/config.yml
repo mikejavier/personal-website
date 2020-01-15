@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: develop
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    sort: "date:desc"
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Category", name: "category", widget: "string", required: true}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "es", "pt"], required: true}
+      - {label: "Tags", name: "tags", widget: "list", required: true}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: true}
+      - {label: Summary 164-220, name: summary, widget: text, required: true, pattern: ['.{164,220}', "Must be within 164 and 220 characters"]}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
+      - {label: "Publish Date", name: "date", widget: "date", required: true}
+      - {label: "Updated Date", name: "update", widget: "date", required: true}

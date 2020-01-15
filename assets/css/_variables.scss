@@ -1,7 +1,7 @@
 @import "~bulma/sass/utilities/_all";
 
-$primary: #0088CC;
-$primary-invert: findColorInvert($primary);
+// $primary: #0088CC;
+// $primary-invert: findColorInvert($primary);
 
 $colors: (
   "white": ($white, $black),
@@ -16,8 +16,6 @@ $colors: (
   "link": ($link, $link-invert)
 );
 
-$link: $primary;
-$link-invert: $primary-invert;
-$link-focus-border: $primary;
-
-@import "~bulma";
+// $link: $primary;
+// $link-invert: $primary-invert;
+// $link-focus-border: $primary;

@@ -1,26 +1,6 @@
 <template>
   <div class="container">
     <div class="level is-mobile">
-      <div class="level-left">
-        <div class="level-item">
-          <div class="buttons">
-            <nuxt-link
-              :to="localePath('index')"
-              exact
-              class="button is-white is-capitalized"
-            >
-              {{ $t('whoIAm') }}
-            </nuxt-link>
-            <nuxt-link
-              :to="localePath('blog')"
-              exact
-              class="button is-white is-capitalized"
-            >
-              blog
-            </nuxt-link>
-          </div>
-        </div>
-      </div>
       <div class="level-right">
         <div class="level-item">
           <div class="dropdown is-hoverable is-right">

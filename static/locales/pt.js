@@ -7,20 +7,58 @@ export default {
   english: 'inglês',
   portuguese: 'português',
   spanish: 'espanhol',
+  profession: 'Desenvolvedor Web',
   aboutPage: {
-    intro:
-      'Meu nome é Michael Santillán, nascido no Equador, tenho {age} anos e atualmente moro no Brasil, onde trabalho com desenvolvimento web usando principalmente a linguagem JavaScript, seja no front-end ou no back-end.',
-    work:
-      'Neste momento estou trabalhando como programador back-end na {vizir} e antes disso era front-end na {leet}, empresa por trás do {postgrain}. Mais informações profissionais podem ser encontradas no meu {linkedin}.',
-    openSource:
-      'Eu aprecio o movimento open-source e os benefícios que traz consigo. Por este motivo sempre que posso, tento de alguma forma contribuir em alguns projetos no {github}. Os mais recentes foram {repositories}.',
-    readings: {
-      text1:
-        'Já faz um tempo que adicionei o hábito de ler á minha rotina, inclusive, todo início de ano atualizo meu desafio de leitura no {goodreads}.',
-      text2: 'Estes são meus últimos livros lidos:'
+    intro: {
+      title: 'Quem eu sou',
+      firstText:
+        'Meu nome é Michael Santillán, nascido no Equador, tenho {age} anos e atualmente moro no Brasil. Trabalho com desenvolvimento web o que me possibilita ajudar empresas e empreendedores a dar vida a suas idéias.',
+      secondText:
+        'Se você tem um projeto e gostaria de trabalhar comigo, entre em contato!'
     },
-    contact:
-      'E por fim, entre uma atividade e outra, faço uso do {twitter}. Hoje a rede social que mais utilizo. É através dele ou do {telegram} que você pode entrar em contato comigo.'
+    skills: {
+      title: 'Habilidades',
+      firstText:
+        'Tenho conhecimento de front-end e back-end. Atualmente esta é stack que mais utilizo',
+      secondText: 'além disso....',
+      item1: 'Desenvolvimento de layouts responsivos (Mobile First)',
+      item2:
+        'CSS Frameworks (Bulma, Bootstrap) e pré-processadores (Sass, Stylus)',
+      item3: 'Front-end Frameworks (Vue, React, Angular)',
+      item4: 'Back-end Frameworks (Express, Adonis, Nest)',
+      item5: 'Banco de dados (Postgres, Mysql, Mongo)',
+      item6: 'Desenvolvimento com testes (unit, e2e)',
+      item7: 'Integração com APIs',
+      item8: 'Desenvolvimento com WordPress',
+      item9: 'CD/CI, Docker, AWS',
+      thirdText: 'Não esta na lista? A gente aprende!'
+    },
+    works: {
+      title: 'Experiência de trabalho',
+      job1: {
+        title: 'Desenvolvedor back-end - {vizir} (2019 - Present)',
+        description:
+          'Entender o problema e resolvê-lo independentemente da tecnologia utilizada é um desafio e ao mesmo tempo um aprendizado diário que venho tendo como desenvolvedor back-end na vizir.'
+      },
+      job2: {
+        title: 'Desenvolvedor front-end - {leet} (2017 - 2018)',
+        description:
+          'Fiz parte do time de desenvolvimento front-end do principal produto da empresa, {postgrain}. Aplicativo para gerenciamento de contas do Instagram para agências e freelancers.'
+      },
+      job3: {
+        title:
+          'Desenvolvedor Web - Diversas agencias em Recife - PE (2013 - 2017)',
+        description:
+          'Durante 4 anos trabalhei para diversas agências no Recife, os trabalhos geralmente eram desenvolvimento de site ou e-commerce muitas vezes utilizando WordPress.'
+      },
+      aboutMore:
+        'Mais detalhes da minha trajetória profissional podem ser  encontrados no meu {linkedin}.'
+    },
+    projects: {
+      title: 'Projetos',
+      description:
+        'No tempo livre passo trabalhando em projetos próprios ou contribuindo em alguns projetos no {github}. Os mais recentes foram {repositories}'
+    }
   },
   articlesNotFound: 'Não estou achando os artigos para mostrar :(',
   footerMessage: 'Feito com {vue}, {nuxt}, {bulma} e {heart}'

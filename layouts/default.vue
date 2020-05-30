@@ -14,7 +14,7 @@
           Michael Santillán
         </h1>
         <h2 class="subtitle has-text-grey-light has-text-weight-normal">
-          JavaScript Developer
+          {{ $t('profession') }}
         </h2>
       </div>
       <hr />

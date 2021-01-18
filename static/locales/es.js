@@ -1,4 +1,5 @@
 export default {
+  contactMe: '¡ponte en contacto!',
   welcome: 'Bienvenido',
   about: 'sobre',
   contact: 'contacto',
@@ -14,7 +15,7 @@ export default {
       firstText:
         'Mi nombre es Michael Santillán, nacido en Ecuador, tengo {age} años y actualmente vivo en Brasil. Trabajo con desarrollo web que me permite ayudar a empresas y emprendedores a hacer realidad sus ideas.',
       secondText:
-        'Si tienes un proyecto y te gustaría trabajar conmigo, ¡ponte en contacto!'
+        'Si tienes un proyecto y te gustaría trabajar conmigo, {mail}'
     },
     skills: {
       title: 'Habilidades',

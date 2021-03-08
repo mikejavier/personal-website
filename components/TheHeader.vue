@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div class="level is-mobile">
-      <div class="level-left"></div>
       <div class="level-right">
         <div class="level-item">
           <div class="dropdown is-hoverable is-right">

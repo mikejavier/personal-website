@@ -1,11 +1,5 @@
 <template>
-  <aside class="aside" :class="{ open: menuIsOpened }">
-    <span class="icon" @click="openMenu">
-      <i
-        class="fas"
-        :class="{ 'fa-times': menuIsOpened, 'fa-bars': !menuIsOpened }"
-      ></i>
-    </span>
+  <aside class="aside p-5" :class="{ open: isOpen }">
     <figure class="image is-128x128" style="margin-bottom: 1rem">
       <img
         class="is-rounded"
@@ -19,18 +13,23 @@
     <h2 class="has-text-grey-light has-text-weight-normal is-size-5">
       {{ $t('profession') }}
     </h2>
-    <br>
+    <br />
     <p>
-      Born in Ecuador, JavaScript lover and an advocate for online privacy and open-source software.
+      Born in Ecuador, JavaScript lover and an advocate for online privacy and
+      open-source software.
     </p>
-    <br>
+    <br />
     <p class="buttons">
-      <a href="#" class="button">
+      <a href="https://github.com/mikejavier" target="_blank" class="button">
         <span class="icon is-small">
           <i class="fab fa-github"></i>
         </span>
       </a>
-      <a href="#" class="button">
+      <a
+        href="https://www.linkedin.com/in/mikejavier"
+        target="_blank"
+        class="button"
+      >
         <span class="icon is-small">
           <i class="fab fa-linkedin-in"></i>
         </span>
@@ -42,13 +41,15 @@
       </button>
     </p>
     <hr />
-    <app-menu />
-    <hr />
-    <div class="has-text-centered">
+    <div class="block">
+      <app-menu />
+    </div>
+
+    <div class="block">
       <div class="dropdown is-hoverable is-up">
         <div class="dropdown-trigger">
           <button
-            class="button is-capitalized"
+            class="button is-capitalized is-white"
             aria-haspopup="true"
             aria-controls="dropdown-menu"
           >
@@ -74,6 +75,26 @@
         </div>
       </div>
     </div>
+    <hr />
+    <div class="content">
+      <p>Michael Santillán © {{ getCurrentYear }}</p>
+      <p>
+        <i18n path="footerMessage" tag="small">
+          <template v-slot:vue>
+            <a href="https://vuejs.org/" target="_blank">Vue</a>
+          </template>
+          <template v-slot:nuxt>
+            <a href="https://nuxtjs.org/" target="_blank">Nuxt</a>
+          </template>
+          <template v-slot:bulma>
+            <a href="http://bulma.io/" target="_blank">Bulma</a>
+          </template>
+          <template v-slot:heart>
+            <i class="fa fa-heart"></i>
+          </template>
+        </i18n>
+      </p>
+    </div>
   </aside>
 </template>
 
@@ -85,9 +106,10 @@ export default {
     AppMenu
   },
 
-  data() {
-    return {
-      menuIsOpened: false
+  props: {
+    isOpen: {
+      type: Boolean,
+      require: true
     }
   },
 
@@ -103,6 +125,11 @@ export default {
       }))
     },
 
+    getCurrentYear() {
+      const today = new Date()
+      return today.getFullYear()
+    },
+
     selectedLocale() {
       const currentLocale = this.$i18n.locales.find(
         ({ code }) => this.$i18n.locale === code
@@ -110,19 +137,12 @@ export default {
 
       return this.$t(currentLocale.label)
     }
-  },
-
-  methods: {
-    openMenu() {
-      this.menuIsOpened = !this.menuIsOpened
-    }
   }
 }
 </script>
 
 <style scoped lang="scss">
 .aside {
-  padding: 1rem;
   background-color: #fff;
   width: 100%;
   max-width: 260px;
@@ -133,6 +153,8 @@ export default {
   left: 0;
   transform: translateX(-260px);
   transition: transform 0.5s;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   @media only screen and (min-width: 375px) {
     max-width: 320px;
@@ -145,16 +167,7 @@ export default {
     z-index: initial;
     transform: translateX(0);
     width: 30%;
-  }
-
-  > .icon {
-    position: absolute;
-    right: -40px;
-    top: 10px;
-
-    @media only screen and (min-width: 1024px) {
-      display: none;
-    }
+    overflow: initial;
   }
 }
 

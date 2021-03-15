@@ -1,19 +1,23 @@
 <template>
   <aside class="menu">
-      <ul class="menu-list">
-        <li><a class="is-active">About</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Contact</a></li>
-      </ul>
-    </aside>
+    <ul class="menu-list">
+      <li class="is-capitalized">
+        <nuxt-link :to="localePath('/')" exact>{{ $t('about') }}</nuxt-link>
+      </li>
+      <li class="is-capitalized">
+        <nuxt-link :to="localePath('/blog')">Blog</nuxt-link>
+      </li>
+      <li class="is-capitalized">
+        <nuxt-link :to="localePath('/contact')">{{ $t('contact') }}</nuxt-link>
+      </li>
+    </ul>
+  </aside>
 </template>
 
 <script>
 export default {
-  name: "AppMenu"
+  name: 'AppMenu'
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

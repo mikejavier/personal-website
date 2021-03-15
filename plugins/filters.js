@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import { format, formatDistanceToNow } from 'date-fns'
-import { es, pt } from 'date-fns/locale'
-import readingTime from 'reading-time'
+import { es, ptBR } from 'date-fns/locale'
 
-const locales = { es, pt }
+const locales = { es, pt: ptBR }
 
 Vue.filter('fullDate', (date, locale) => {
   if (locale === 'en') {
@@ -19,12 +18,6 @@ Vue.filter('dateSince', (date, locale) => {
   }
 
   return formatDistanceToNow(date, { addSuffix: true, locale: locales[locale] })
-})
-
-Vue.filter('readingTime', (time, text = 'read') => {
-  const timeToRead = Math.ceil(readingTime(time).minutes.toFixed(2))
-
-  return `${timeToRead} min ${text}`
 })
 
 Vue.filter('truncateText', (text, length = 180) => {

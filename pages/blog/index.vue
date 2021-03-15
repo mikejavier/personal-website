@@ -1,81 +1,94 @@
 <template>
-  <div v-if="hasPost" class="section">
-    <article v-for="(post, index) in posts" :key="index" class="media">
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <strong style="margin-right: 1rem">
-              <nuxt-link
-                :to="
-                  localePath({ name: 'blog-slug', params: { slug: post.link } })
-                "
-                class="has-text-grey-dark is-size-4"
-                >{{ post.title }}</nuxt-link
-              >
-            </strong>
-            <time class="has-text-grey" :datetime="post.date">{{
-              new Date(post.date) | dateSince($i18n.locale)
-            }}</time>
-            <br />
-            {{ post.summary | truncateText }}
-          </p>
+  <div>
+    <div class="block">
+      <h1 class="title" v-if="hasQueryParams">#{{ getTag }}</h1>
+      <div class="field" v-else>
+        <div class="control is-expanded">
+          <input
+            class="input"
+            v-model="searchQuery"
+            type="search"
+            autocomplete="off"
+            :placeholder="$t('findAnArticle')"
+          />
         </div>
       </div>
-    </article>
-  </div>
-  <div v-else class="section">
-    <p class="has-text-centered">{{ $t('articlesNotFound') }}</p>
+    </div>
+    <hr />
+    <div v-if="hasArticles">
+      <app-article
+        v-for="(article, index) in articles"
+        :key="index"
+        :article="article"
+      />
+    </div>
+    <div v-else class="section">
+      <p class="has-text-centered">{{ $t('articlesNotFound') }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-import blogs from '~/content/blogs.json'
+import AppArticle from '@/components/AppArticle'
 
 export default {
-  async asyncData() {
-    const awaitImport = async blog => {
-      const blogMD = await import(`~/content/blog/${blog.slug}.md`)
+  name: 'Blog',
 
-      return {
-        ...blogMD.attributes,
-        link: blog.slug,
-        text: blogMD.body
-      }
+  components: {
+    AppArticle
+  },
+
+  data() {
+    return {
+      articles: [],
+      searchQuery: ''
     }
-
-    return await Promise.all(
-      blogs.map(blog => awaitImport(blog))
-    ).then(res => ({ blogList: res }))
   },
 
   computed: {
-    posts() {
-      return this.filteredPosts(this.blogList)
+    getTag() {
+      const { tag } = this.$route.query
+
+      return tag
     },
 
-    getQuery() {
-      return this.$route.query
+    hasQueryParams() {
+      return Object.keys(this.$route.query).length !== 0
     },
 
-    hasPost() {
-      return !!this.posts.length
+    hasArticles() {
+      return !!this.articles.length
     }
   },
 
-  methods: {
-    filteredPosts(postList) {
-      const query = this.getQuery
-
-      if (Object.keys(query).includes('tag')) {
-        return postList.filter(post => post.tags.includes(query.tag))
+  watch: {
+    async searchQuery(searchQuery) {
+      if (!searchQuery) {
+        this.articles = await this.$content('articles')
+          .sortBy('createdAt', 'desc')
+          .fetch()
+        return
       }
-
-      if (Object.keys(query).includes('category')) {
-        return postList.filter(post => post.category === query.category)
-      }
-
-      return postList
+      this.articles = await this.$content('articles')
+        .search(searchQuery)
+        .sortBy('createdAt', 'desc')
+        .fetch()
     }
+  },
+
+  async mounted() {
+    if (Object.keys(this.$route.query).includes('tag')) {
+      const { tag } = this.$route.query
+
+      this.articles = await this.$content('articles')
+        .where({ tags: { $contains: tag } })
+        .sortBy('createdAt', 'desc')
+        .fetch()
+
+      return
+    }
+
+    this.articles = await this.$content('articles').fetch()
   },
 
   head() {

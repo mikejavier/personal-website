@@ -1,12 +1,7 @@
-import blogs from './content/blogs.json'
 import locales from './static/locales'
 
 module.exports = {
-  mode: 'universal',
-
-  generate: {
-    routes: [].concat(blogs.map(blog => `/blog/${blog.slug}`))
-  },
+  mode: 'spa',
 
   router: {
     linkActiveClass: 'is-active',
@@ -15,9 +10,28 @@ module.exports = {
 
   plugins: ['~/plugins/filters.js'],
 
-  modules: ['nuxt-i18n', '@nuxtjs/style-resources'],
+  modules: ['nuxt-i18n', '@nuxtjs/style-resources', '@nuxt/content'],
 
   buildModules: ['@nuxtjs/google-analytics'],
+
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const readingTime = Math.ceil(require('reading-time')(document.text).minutes.toFixed(2))
+
+        document.readingTime = `${readingTime} min`
+      }
+    }
+  },
+
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-dracula.css'
+      }
+    },
+    fullTextSearchFields: ['title', 'slug']
+  },
 
   googleAnalytics: {
     id: 'UA-40750162-3'
@@ -174,14 +188,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-
-      config.module.rules.push({
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        options: {
-          vue: true
-        }
-      })
     }
   }
 }

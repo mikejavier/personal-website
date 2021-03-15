@@ -34,11 +34,9 @@
           <i class="fab fa-linkedin-in"></i>
         </span>
       </a>
-      <button class="button">
-        <span class="icon is-small">
-          <i class="fas fa-rss"></i>
-        </span>
-      </button>
+      <a href="/feed.xml" target="_blank" class="button"
+        ><span class="icon is-small"> <i class="fas fa-rss"></i> </span
+      ></a>
     </p>
     <hr />
     <div class="block">

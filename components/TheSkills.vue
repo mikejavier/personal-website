@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="block">
     <h2 class="has-text-weight-normal">{{ $t('aboutPage.skills.title') }}</h2>
 
     <p>{{ $t('aboutPage.skills.firstText') }}</p>
@@ -9,16 +9,13 @@
       style="justify-content: space-between; flex-wrap: wrap;"
     >
       <span class="control is-size-1"
+        ><i class="devicon-nodejs-plain colored"></i
+      ></span>
+      <span class="control is-size-1"
         ><i class="devicon-typescript-plain colored"></i
       ></span>
       <span class="control is-size-1"
         ><i class="devicon-vuejs-plain-wordmark colored"></i
-      ></span>
-      <span class="control is-size-1"
-        ><i class="devicon-nodejs-plain colored"></i
-      ></span>
-      <span class="control is-size-1"
-        ><i class="devicon-mocha-plain colored"></i
       ></span>
       <span class="control is-size-1"
         ><i class="devicon-postgresql-plain-wordmark colored"></i

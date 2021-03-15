@@ -1,12 +1,59 @@
-import blogs from './content/blogs.json'
 import locales from './static/locales'
 
-module.exports = {
-  mode: 'universal',
+let posts = []
 
-  generate: {
-    routes: [].concat(blogs.map(blog => `/blog/${blog.slug}`))
-  },
+const createSitemapRoutes = async () => {
+  let routes = []
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content('articles')
+      .sortBy('createdAt', 'desc')
+      .fetch()
+  for (const post of posts) {
+    routes.push(`blog/${post.slug}`)
+  }
+  return routes
+}
+
+const constructFeedItem = (post, dir, hostname) => {
+  const url = `${hostname}/${dir}/${post.slug}`
+  return {
+    title: post.title,
+    id: url,
+    link: url,
+    description: post.summary,
+    content: post.bodyPlainText
+  }
+}
+
+const create = async (feed, args) => {
+  const [filePath, ext] = args
+  const hostname =
+    process.NODE_ENV === 'production'
+      ? 'https://michaelsantillan.com'
+      : 'http://localhost:3000'
+  feed.options = {
+    title: 'Blog - Michael Santillán',
+    description: 'The list of Michael Santillán Stuff!',
+    link: `${hostname}/feed.${ext}`
+  }
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content(filePath)
+      .sortBy('createdAt', 'desc')
+      .fetch()
+
+  for (const post of posts) {
+    const feedItem = await constructFeedItem(post, filePath, hostname)
+    feed.addItem(feedItem)
+  }
+  return feed
+}
+
+module.exports = {
+  ssr: false,
+
+  target: 'static',
 
   router: {
     linkActiveClass: 'is-active',
@@ -15,9 +62,57 @@ module.exports = {
 
   plugins: ['~/plugins/filters.js'],
 
-  modules: ['nuxt-i18n', '@nuxtjs/style-resources'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/feed',
+    'nuxt-i18n',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
+  ],
+
+  feed: [
+    {
+      path: '/feed.xml',
+      create,
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2',
+      data: ['articles', 'xml']
+    }
+  ],
+
+  sitemap: {
+    hostname:
+      process.NODE_ENV === 'production'
+        ? 'https://michaelsantillan.com'
+        : 'http://localhost:3000',
+    i18n: true,
+    gzip: true,
+    routes: createSitemapRoutes
+  },
 
   buildModules: ['@nuxtjs/google-analytics'],
+
+  hooks: {
+    'content:file:beforeInsert': document => {
+      if (document.extension === '.md') {
+        const readingTime = Math.ceil(
+          require('reading-time')(document.text).minutes.toFixed(2)
+        )
+
+        document.readingTime = `${readingTime} min`
+        document.bodyPlainText = document.text
+      }
+    }
+  },
+
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-dracula.css'
+      }
+    },
+    fullTextSearchFields: ['title', 'slug']
+  },
 
   googleAnalytics: {
     id: 'UA-40750162-3'
@@ -174,14 +269,6 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-
-      config.module.rules.push({
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        options: {
-          vue: true
-        }
-      })
     }
   }
 }

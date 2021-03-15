@@ -1,33 +1,47 @@
 <template>
   <div>
-    <div class="content has-text-centered">
-      <h1 class="title is-1 has-text-weight-medium">
-        {{ title }}
-      </h1>
-      <p class="has-text-grey-light is-uppercase">
-        <span class="is-uppercase">{{
-          new Date(date) | fullDate($i18n.locale)
-        }}</span>
-        <span style="margin-right: 1rem; margin-left: 1rem" />
-        {{ postInText | readingTime($t('read'), $i18n.locale) }}
-      </p>
+    <h1 class="title is-1 has-text-weight-medium">
+      {{ article.title }}
+    </h1>
+
+    <h2 class="subtitle">{{ article.summary }}</h2>
+
+    <div class="block">
+      <span class="has-text-grey" :datetime="article.date"
+        >{{ new Date(article.createdAt) | fullDate($i18n.locale) }} ({{
+          $t('updated')
+        }}
+        {{ new Date(article.updatedAt) | dateSince($i18n.locale) }})</span
+      >
+      <span class="has-text-grey"
+        >· {{ `${article.readingTime} ${$t('read')}` }}</span
+      >
     </div>
-    <hr />
-    <div class="content" v-html="postInHtml"></div>
-    <span>
-      <span class="icon">
-        <i class="fas fa-tags"></i>
-      </span>
+
+    <nav class="tags">
       <nuxt-link
-        v-for="(tag, index) in tags"
+        v-for="(tag, index) in article.tags"
         :key="index"
         :to="localePath({ name: 'blog', query: { tag } })"
-        class="tag is-white"
+        class="tag is-link is-light"
         >#{{ tag }}</nuxt-link
       >
-    </span>
+    </nav>
+
+    <nuxt-content :document="article" class="content" />
+
     <hr />
-    <div id="disqus_thread"></div>
+
+    <div class="block">
+      <script
+        src="https://utteranc.es/client.js"
+        repo="mikejavier/blog-comments"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+      ></script>
+    </div>
   </div>
 </template>
 
@@ -35,31 +49,56 @@
 export default {
   name: 'BlogPost',
 
-  layout: 'post',
+  async asyncData({ $content, params, redirect }) {
+    const article = await $content('articles', params.slug)
+      .fetch()
+      .catch(() => {
+        redirect('/404')
+      })
 
-  async asyncData({ params }) {
-    const post = await import(`~/content/blog/${params.slug}.md`)
-
-    return {
-      ...post.attributes,
-      slug: params.slug,
-      postInText: post.body,
-      postInHtml: post.html
-    }
+    return { article }
   },
 
   head() {
     return {
-      title: `${this.title} - Michael Santillán | blog`,
+      title: `${this.article.title} - Michael Santillán | blog`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.summary
+          content: this.article.summary
         }
-      ],
-      script: [{ src: '/scripts/disqus.js' }]
+      ]
     }
   }
 }
 </script>
+
+<style lang="scss">
+.icon.icon-link {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 3px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 16px;
+  text-rendering: auto;
+  line-height: 1;
+
+  &:before {
+    position: absolute;
+    content: '\f0c1';
+    font-family: 'Font Awesome 5 Free';
+    top: 4px;
+    left: 0;
+  }
+}
+
+.utterances {
+  max-width: none;
+}
+</style>

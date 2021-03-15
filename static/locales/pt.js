@@ -4,14 +4,15 @@ export default {
   about: 'sobre',
   contact: 'contato',
   read: 'leitura',
-  whoIAm: 'quem eu sou?',
   english: 'inglês',
   portuguese: 'português',
   spanish: 'espanhol',
   profession: 'Desenvolvedor Web',
+  updated: 'atualizado',
+  readMore: 'Ler mais',
+  findAnArticle: 'encontre um artigo',
   aboutPage: {
     intro: {
-      title: 'Quem eu sou',
       firstText:
         'Meu nome é Michael Santillán, nascido no Equador, tenho {age} anos e atualmente moro no Brasil. Trabalho com desenvolvimento web o que me possibilita ajudar empresas e empreendedores a dar vida a suas idéias.',
       secondText:
@@ -61,6 +62,34 @@ export default {
         'No tempo livre passo trabalhando em projetos próprios ou contribuindo em alguns projetos no {github}. Os mais recentes foram {repositories}'
     }
   },
+  contactPage: {
+    title: 'Vamos construir algo juntos!',
+    subtitle: 'Entra em contato comigo para dar vida a suas idéias.',
+    form: {
+      nameField: {
+        label: 'Nome',
+        placeholder: 'seu nome'
+      },
+      emailField: {
+        label: 'Email',
+        placeholder: 'seu@email'
+      },
+      subjectField: {
+        label: 'Assunto',
+        option1: 'Preciso de ajuda com meu projeto',
+        option2: 'Somente falar com você',
+        option3: 'Outro'
+      },
+      messageField: {
+        label: 'Mensagem',
+        placeholder: 'sua mensagem'
+      },
+      submitButton: 'Enviar'
+    }
+  },
   articlesNotFound: 'Não estou achando os artigos para mostrar :(',
-  footerMessage: 'Feito com {vue}, {nuxt}, {bulma} e {heart}'
+  footerMessage: 'Feito com {vue}, {nuxt}, {bulma} e {heart}',
+  notFoundPage: {
+    message: 'Ei, olha quem se perdeu...'
+  }
 }

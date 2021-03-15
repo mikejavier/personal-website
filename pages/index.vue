@@ -15,6 +15,8 @@ import TheWorks from '@/components/TheWorks'
 import TheProjects from '@/components/TheProjects'
 
 export default {
+  name: 'About',
+
   components: {
     TheIntro,
     TheSkills,

@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="block">
     <h2 class="has-text-weight-normal">{{ $t('aboutPage.projects.title') }}</h2>
 
     <i18n path="aboutPage.projects.description" tag="p">

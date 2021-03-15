@@ -1,6 +1,6 @@
 <template>
-  <div class="section">
-    <h2 class="has-text-weight-normal">Work Experience</h2>
+  <div class="block">
+    <h2 class="has-text-weight-normal">{{ $t('aboutPage.works.title') }}</h2>
 
     <p v-for="(n, index) in 3" :key="index">
       <i18n :path="`aboutPage.works.job${n}.title`" tag="strong">

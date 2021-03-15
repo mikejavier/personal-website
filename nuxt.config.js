@@ -53,6 +53,8 @@ const create = async (feed, args) => {
 module.exports = {
   ssr: false,
 
+  target: 'static',
+
   router: {
     linkActiveClass: 'is-active',
     linkExactActiveClass: 'is-active'

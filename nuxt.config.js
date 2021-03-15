@@ -1,5 +1,20 @@
 import locales from './static/locales'
 
+let posts = []
+
+const createSitemapRoutes = async () => {
+  let routes = []
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content('articles')
+      .sortBy('createdAt', 'desc')
+      .fetch()
+  for (const post of posts) {
+    routes.push(`blog/${post.slug}`)
+  }
+  return routes
+}
+
 const constructFeedItem = (post, dir, hostname) => {
   const url = `${hostname}/${dir}/${post.slug}`
   return {
@@ -12,7 +27,6 @@ const constructFeedItem = (post, dir, hostname) => {
 }
 
 const create = async (feed, args) => {
-  let posts = []
   const [filePath, ext] = args
   const hostname =
     process.NODE_ENV === 'production'
@@ -50,7 +64,8 @@ module.exports = {
     '@nuxt/content',
     '@nuxtjs/feed',
     'nuxt-i18n',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
   ],
 
   feed: [
@@ -62,6 +77,16 @@ module.exports = {
       data: ['articles', 'xml']
     }
   ],
+
+  sitemap: {
+    hostname:
+      process.NODE_ENV === 'production'
+        ? 'https://michaelsantillan.com'
+        : 'http://localhost:3000',
+    i18n: true,
+    gzip: true,
+    routes: createSitemapRoutes
+  },
 
   buildModules: ['@nuxtjs/google-analytics'],
 

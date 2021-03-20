@@ -41,6 +41,17 @@ export default {
     openMenu() {
       this.menuIsOpen = !this.menuIsOpen
     }
+  },
+
+  head() {
+    return {
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://www.michaelsantillan.com' + this.$route.path
+        }
+      ]
+    }
   }
 }
 </script>

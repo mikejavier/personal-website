@@ -234,7 +234,6 @@ module.exports = {
         size: '16x16'
       },
       { rel: 'manifest', href: '/manifest.json?v=m2lnn8L340' },
-      { rel: 'canonical', href: 'https://www.michaelsantillan.com' },
       {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.3.1/css/all.css',

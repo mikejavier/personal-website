@@ -5,12 +5,7 @@
     <div v-if="showNotification" class="notification is-primary is-light">
       Mensagem enviada com sucesso!
     </div>
-    <form
-      name="contact"
-      :action="localePath({ name: 'contact', query: { sent: true } })"
-      method="POST"
-      data-netlify="true"
-    >
+    <form name="contact" method="POST" data-netlify="true">
       <div class="field">
         <label class="label">{{
           $t('contactPage.form.nameField.label')

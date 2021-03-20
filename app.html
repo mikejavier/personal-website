@@ -4,7 +4,13 @@
     {{ HEAD }}
   </head>
   <body {{ BODY_ATTRS }}>
-    <form name="contact" data-netlify="true" hidden>
+    <form
+      name="contact"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input name="bot-field" />
       <input type="text" name="name" />
       <input type="email" name="email" />
       <textarea class="textarea" name="message"></textarea>

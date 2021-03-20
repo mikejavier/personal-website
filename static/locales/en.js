@@ -85,7 +85,9 @@ export default {
         placeholder: 'your message'
       },
       submitButton: 'Submit'
-    }
+    },
+    messageSuccess: 'Message sent successfully',
+    messageError: 'Failed to send message'
   },
   articlesNotFound: "I can't find the articles to show :(",
   footerMessage: 'Made with {vue}, {nuxt}, {bulma} and {heart}',

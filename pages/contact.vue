@@ -17,6 +17,7 @@
         }}</label>
         <div class="control">
           <input
+            name="name"
             class="input"
             type="text"
             :placeholder="$t('contactPage.form.nameField.placeholder')"
@@ -31,6 +32,7 @@
         }}</label>
         <div class="control">
           <input
+            name="email"
             class="input"
             type="email"
             :placeholder="$t('contactPage.form.emailField.placeholder')"
@@ -45,7 +47,7 @@
         }}</label>
         <div class="control">
           <div class="select">
-            <select>
+            <select name="subject">
               <option value="project">{{
                 $t('contactPage.form.subjectField.option1')
               }}</option>
@@ -66,6 +68,7 @@
         }}</label>
         <div class="control">
           <textarea
+            name="message"
             class="textarea"
             :placeholder="$t('contactPage.form.messageField.placeholder')"
             required

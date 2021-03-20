@@ -11,6 +11,8 @@ export default {
   updated: 'updated',
   readMore: 'Read more',
   findAnArticle: 'find an article',
+  profileDescription:
+    'Born in Ecuador, JavaScript lover and an advocate for online privacy and open-source software',
   aboutPage: {
     intro: {
       firstText:

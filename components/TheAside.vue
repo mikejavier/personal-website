@@ -14,10 +14,7 @@
       {{ $t('profession') }}
     </h2>
     <br />
-    <p>
-      Born in Ecuador, JavaScript lover and an advocate for online privacy and
-      open-source software.
-    </p>
+    <p>{{ $t('profileDescription') }}</p>
     <br />
     <p class="buttons">
       <a href="https://github.com/mikejavier" target="_blank" class="button">

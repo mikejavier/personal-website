@@ -11,6 +11,8 @@ export default {
   updated: 'actualizado',
   readMore: 'Leer más',
   findAnArticle: 'encontrar un artículo',
+  profileDescription:
+    'Nacido en Ecuador, amante de JavaScript y defensor de la privacidad online y del software de código abierto',
   aboutPage: {
     intro: {
       firstText:

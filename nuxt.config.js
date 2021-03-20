@@ -55,10 +55,6 @@ module.exports = {
 
   target: 'static',
 
-  generate: {
-    fallback: true
-  },
-
   router: {
     linkActiveClass: 'is-active',
     linkExactActiveClass: 'is-active'

@@ -12,13 +12,13 @@
       name="contact"
       method="POST"
       data-netlify="true"
-      netlify-honeypot="bot-field"
+      netlify-honeypot="botfield"
       @submit.prevent="submitHandler"
     >
       <p class="is-invisible">
         <label
           >Don’t fill this out if you’re human:
-          <input v-model="form.bot" name="bot-field"
+          <input v-model="form.botfield" name="botfield"
         /></label>
       </p>
       <div class="field">
@@ -111,7 +111,7 @@ export default {
       notificationSuccess: false,
       notificationError: false,
       form: {
-        bot: '',
+        botfield: '',
         name: '',
         email: '',
         subject: '',

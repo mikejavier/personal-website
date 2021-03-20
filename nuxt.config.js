@@ -29,7 +29,7 @@ const constructFeedItem = (post, dir, hostname) => {
 const create = async (feed, args) => {
   const [filePath, ext] = args
   const hostname =
-    process.NODE_ENV === 'production'
+    process.env.NODE_ENV === 'production'
       ? 'https://michaelsantillan.com'
       : 'http://localhost:3000'
   feed.options = {
@@ -86,7 +86,7 @@ module.exports = {
 
   sitemap: {
     hostname:
-      process.NODE_ENV === 'production'
+      process.env.NODE_ENV === 'production'
         ? 'https://michaelsantillan.com'
         : 'http://localhost:3000',
     i18n: true,

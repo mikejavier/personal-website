@@ -3,7 +3,7 @@
     <figure class="image is-128x128" style="margin-bottom: 1rem">
       <img
         class="is-rounded"
-        src="~/assets/images/photo.png"
+        src="~/assets/images/photo.jpeg"
         alt="Michael Santillán photo"
       />
     </figure>
@@ -17,6 +17,15 @@
     <p>{{ $t('profileDescription') }}</p>
     <br />
     <p class="buttons">
+      <a
+        href="https://www.instagram.com/_mikejavier/"
+        target="_blank"
+        class="button"
+      >
+        <span class="icon is-small">
+          <i class="fab fa-instagram"></i>
+        </span>
+      </a>
       <a href="https://github.com/mikejavier" target="_blank" class="button">
         <span class="icon is-small">
           <i class="fab fa-github"></i>

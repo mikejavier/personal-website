@@ -12,7 +12,7 @@ export default {
   readMore: 'Read more',
   findAnArticle: 'find an article',
   profileDescription:
-    'Born in Ecuador, JavaScript lover and an advocate for online privacy and open-source software',
+    'Born in Ecuador, code lover and an enthusiast for online privacy and open-source software ',
   aboutPage: {
     intro: {
       firstText:
@@ -89,7 +89,11 @@ export default {
     messageSuccess: 'Message sent successfully',
     messageError: 'Failed to send message'
   },
-  articlesNotFound: "I can't find the articles to show :(",
+  blogPage: {
+    title: 'Welcome to my blog',
+    subtitle: 'here you will find content about programming and technology',
+    articlesNotFound: "I can't find the articles to show :("
+  },
   footerMessage: 'Made with {vue}, {nuxt}, {bulma} and {heart}',
   notFoundPage: {
     message: "Hey, look who's lost..."

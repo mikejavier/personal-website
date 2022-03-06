@@ -12,7 +12,7 @@ export default {
   readMore: 'Leer más',
   findAnArticle: 'encontrar un artículo',
   profileDescription:
-    'Nacido en Ecuador, amante de JavaScript y defensor de la privacidad online y del software de código abierto',
+    'Nacido en Ecuador, amante del código y entusiasta de la privacidad en línea y el software de código abierto',
   aboutPage: {
     intro: {
       firstText:
@@ -90,7 +90,11 @@ export default {
     messageSuccess: 'Mensaje enviado con éxito',
     messageError: 'No se ha podido enviar el mensaje'
   },
-  articlesNotFound: 'No encuentro los artículos para mostrar :(',
+  blogPage: {
+    title: 'Bienvenido a mi blog',
+    subtitle: 'aquí encontrarás contenidos sobre programación y tecnología',
+    articlesNotFound: 'No encuentro los artículos para mostrar :('
+  },
   footerMessage: 'Hecho con {vue}, {nuxt}, {bulma} y {heart}',
   notFoundPage: {
     message: 'Oye, mira quién se ha perdido...'

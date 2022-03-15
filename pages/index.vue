@@ -98,7 +98,9 @@ export default {
 
     this.isFetching = true
 
-    this.articles = await this.$content('articles').fetch()
+    this.articles = await this.$content('articles')
+      .sortBy('createdAt', 'desc')
+      .fetch()
 
     this.isFetching = false
   },

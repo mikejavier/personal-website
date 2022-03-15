@@ -31,13 +31,13 @@ Não é novidade para ninguém que a pandemia acelerou a transformação digital
 
 Se a gente olhar no detalhe o mercado de TI vamos perceber que essa realidade foi para um grupo específico de profissionais.
 
-![Gráfico de impactados pela oferta x demanda do mercado de ti](https://imgur.com/a/pyjzwZK)
+![Gráfico de impactados pela oferta x demanda do mercado de ti](https://i.imgur.com/7UvYW2d.jpg)
 
 O que eu mais gosto do mercado de TI é dele não ser regulamentado e principalmente por ser meritocrático. O valor que você recebe sempre é proporcional ao que você entrega, não importando sua idade, raça ou gênero (detalhe que aqui não estou falando de ambientes). Além disso, temos a liberdade de fazer nossas próprias escolhas.
 
 Essas escolhas podem nos levar para dois caminhos, o primeiro é de ganhar dinheiro (muito se você souber se vender) rapidamente e o segundo é o de ganhar experiência e receber conforme essa experiência vai crescendo. Escolher os dois caminhos ao mesmo tempo é impossível.
 
-![Efeito Dunning-Kruger](https://imgur.com/a/wHPE5mr)
+![Efeito Dunning-Kruger](https://i.imgur.com/XRd9egB.png)
 Imagem retirada de um [post](https://www.reddit.com/r/brdev/comments/tazhxr/o_efeito_dunningkruge/) no reddit feito pelo usuario BluePirate89
 
 E aqui gostaria de deixar bem claro que não existe escolha certa ou escolha errada, cada um vai fazer escolhas baseado nas suas necessidades e estar ciente que as consequências dessas escolhas (sejam positivas ou negativas) chegarão.

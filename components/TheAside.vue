@@ -18,12 +18,13 @@
     <br />
     <p class="buttons">
       <a
-        href="https://www.instagram.com/_mikejavier/"
+        rel="me"
+        href="https://social.michaelsantillan.com/@mikejavier"
         target="_blank"
         class="button"
       >
         <span class="icon is-small">
-          <i class="fab fa-instagram"></i>
+          <i class="fab fa-mastodon"></i>
         </span>
       </a>
       <a href="https://github.com/mikejavier" target="_blank" class="button">

@@ -90,8 +90,6 @@ module.exports = {
     routes: createSitemapRoutes
   },
 
-  buildModules: ['@nuxtjs/google-analytics'],
-
   hooks: {
     'content:file:beforeInsert': document => {
       if (document.extension === '.md') {
@@ -112,10 +110,6 @@ module.exports = {
       }
     },
     fullTextSearchFields: ['title', 'slug']
-  },
-
-  googleAnalytics: {
-    id: 'UA-40750162-3'
   },
 
   i18n: {
@@ -161,7 +155,8 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'JavaScript Developer | Javascript Lover | Vue/Nuxt enthusiast'
+        content:
+          'Web Developer and an enthusiast for online privacy and open-source software'
       },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
@@ -181,29 +176,20 @@ module.exports = {
       { property: 'og:type', content: 'website' },
       {
         property: 'og:title',
-        content: 'Michael Santillán - JavaScript Developer'
+        content: 'Michael Santillán - Web Developer'
       },
       {
         property: 'og:description',
-        content: 'JavaScript Developer | Javascript Lover | Vue/Nuxt enthusiast'
+        content:
+          'Web Developer and an enthusiast for online privacy and open-source software'
       },
       { property: 'og:url', content: 'https://www.michaelsantillan.com' },
       {
         property: 'og:site_name',
-        content: 'Michael Santillán - JavaScript Developer'
+        content: 'Michael Santillán - Web Developer'
       },
       { property: 'og:image', content: '/site_shared.png' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      {
-        name: 'twitter:description',
-        content: 'JavaScript Developer | Javascript Lover | Vue/Nuxt enthusiast'
-      },
-      {
-        name: 'twitter:title',
-        content: 'Michael Santillán - JavaScript Developer'
-      },
-      { name: 'twitter:site', content: '@_mikejavier' },
-      { name: 'twitter:image', content: '/site_shared.png' },
       {
         name: 'google-site-verification',
         content: 'BgpI-6B9mNjw2qYXUz0Q7VnTuEr-bi9hmnuK4rBnBaA'

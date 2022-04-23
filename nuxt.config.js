@@ -90,8 +90,6 @@ module.exports = {
     routes: createSitemapRoutes
   },
 
-  buildModules: ['@nuxtjs/google-analytics'],
-
   hooks: {
     'content:file:beforeInsert': document => {
       if (document.extension === '.md') {
@@ -112,10 +110,6 @@ module.exports = {
       }
     },
     fullTextSearchFields: ['title', 'slug']
-  },
-
-  googleAnalytics: {
-    id: 'UA-40750162-3'
   },
 
   i18n: {

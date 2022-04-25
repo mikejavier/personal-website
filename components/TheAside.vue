@@ -17,33 +17,22 @@
     <p>{{ $t('profileDescription') }}</p>
     <br />
     <p class="buttons">
+      <a href="/feed.xml" target="_blank" class="button">
+        <span class="icon is-small">
+          <i class="fas fa-rss"></i>
+        </span>
+        <span>Blog</span>
+      </a>
       <a
-        rel="me"
-        href="https://social.michaelsantillan.com/@mikejavier"
+        href="https://social.michaelsantillan.com/@mikejavier.rss"
         target="_blank"
         class="button"
       >
         <span class="icon is-small">
-          <i class="fab fa-mastodon"></i>
+          <i class="fas fa-rss"></i>
         </span>
+        <span>Mastodon</span>
       </a>
-      <a href="https://github.com/mikejavier" target="_blank" class="button">
-        <span class="icon is-small">
-          <i class="fab fa-github"></i>
-        </span>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/mikejavier"
-        target="_blank"
-        class="button"
-      >
-        <span class="icon is-small">
-          <i class="fab fa-linkedin-in"></i>
-        </span>
-      </a>
-      <a href="/feed.xml" target="_blank" class="button"
-        ><span class="icon is-small"> <i class="fas fa-rss"></i> </span
-      ></a>
     </p>
     <hr />
     <div class="block">

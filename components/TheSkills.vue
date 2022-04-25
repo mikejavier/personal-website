@@ -1,8 +1,10 @@
 <template>
   <div class="block">
-    <h2 class="has-text-weight-normal">{{ $t('aboutPage.skills.title') }}</h2>
+    <h1 class="has-text-weight-normal">
+      {{ $t('aboutPage.skillsBlock.title') }}
+    </h1>
 
-    <p>{{ $t('aboutPage.skills.firstText') }}</p>
+    <p>{{ $t('aboutPage.skillsBlock.firstParagraph') }}</p>
 
     <p
       class="field is-grouped"
@@ -28,20 +30,20 @@
       ></span>
     </p>
 
-    <p>{{ $t('aboutPage.skills.secondText') }}</p>
+    <p>{{ $t('aboutPage.skillsBlock.secondParagraph') }}</p>
 
     <ul>
-      <li>{{ $t('aboutPage.skills.item1') }}</li>
-      <li>{{ $t('aboutPage.skills.item2') }}</li>
-      <li>{{ $t('aboutPage.skills.item3') }}</li>
-      <li>{{ $t('aboutPage.skills.item4') }}</li>
-      <li>{{ $t('aboutPage.skills.item5') }}</li>
-      <li>{{ $t('aboutPage.skills.item6') }}</li>
-      <li>{{ $t('aboutPage.skills.item7') }}</li>
-      <li>{{ $t('aboutPage.skills.item8') }}</li>
-      <li>{{ $t('aboutPage.skills.item9') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item1') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item2') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item3') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item4') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item5') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item6') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item7') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item8') }}</li>
+      <li>{{ $t('aboutPage.skillsBlock.item9') }}</li>
     </ul>
 
-    <p>{{ $t('aboutPage.skills.thirdText') }}</p>
+    <p>{{ $t('aboutPage.skillsBlock.thirdParagraph') }}</p>
   </div>
 </template>

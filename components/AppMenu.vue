@@ -6,7 +6,7 @@
       </li>
       <li class="is-capitalized">
         <nuxt-link :to="localePath('/about')" exact>{{
-          $t('about')
+          $t('aboutMe')
         }}</nuxt-link>
       </li>
       <li class="is-capitalized">

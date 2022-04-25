@@ -148,7 +148,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'Michael Santillán - Web Developer',
+    title: 'Michael Santillán - Software Engineer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -156,7 +156,7 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content:
-          'Web Developer and an enthusiast for online privacy and open-source software'
+          'Software Engineer and an enthusiast for online privacy and open-source software'
       },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
@@ -176,17 +176,17 @@ module.exports = {
       { property: 'og:type', content: 'website' },
       {
         property: 'og:title',
-        content: 'Michael Santillán - Web Developer'
+        content: 'Michael Santillán - Software Engineer'
       },
       {
         property: 'og:description',
         content:
-          'Web Developer and an enthusiast for online privacy and open-source software'
+          'Software Engineer and an enthusiast for online privacy and open-source software'
       },
       { property: 'og:url', content: 'https://www.michaelsantillan.com' },
       {
         property: 'og:site_name',
-        content: 'Michael Santillán - Web Developer'
+        content: 'Michael Santillán - Software Engineer'
       },
       { property: 'og:image', content: '/site_shared.png' },
       { name: 'twitter:card', content: 'summary_large_image' },

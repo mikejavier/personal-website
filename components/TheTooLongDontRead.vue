@@ -1,0 +1,76 @@
+<template>
+  <div class="block">
+    <h1 class="has-text-weight-normal">
+      {{ $t('aboutPage.tooLongDontReadBlock.title') }}
+    </h1>
+    <p>
+      {{ $t('aboutPage.tooLongDontReadBlock.firstParagraph') }}
+    </p>
+    <i18n path="aboutPage.tooLongDontReadBlock.secondParagraph" tag="p">
+      <template v-slot:mail>
+        <nuxt-link :to="localePath('/contact')">{{ $t('here') }}</nuxt-link>
+      </template>
+    </i18n>
+    <ul>
+      <li>
+        <strong>E-mail:</strong>
+        <span>contato[at]michaelsantilla[dot]com</span>
+      </li>
+      <li>
+        <strong>Mastodon:</strong>
+        <a
+          rel="me"
+          href="https://social.michaelsantillan.com/@mikejavier"
+          target="_blank"
+          >@mikejavier@social.michaelsantillan.com</a
+        >
+      </li>
+    </ul>
+    <p>
+      {{ $t('aboutPage.tooLongDontReadBlock.thirdParagraph') }}
+    </p>
+    <ul>
+      <li>
+        <strong>Github:</strong>
+        <a href="https://github.com/mikejavier" target="_blank">
+          @mikejavier
+        </a>
+      </li>
+      <li>
+        <strong>Reddit:</strong>
+        <a href="https://www.reddit.com/user/mikejavier" target="_blank">
+          @mikejavier
+        </a>
+      </li>
+      <li>
+        <strong>Lichess:</strong>
+        <a href="https://lichess.org/@/mikejavier" target="_blank">
+          @mikejavier
+        </a>
+      </li>
+      <li>
+        <strong>GoodReads:</strong>
+        <a href="https://www.goodreads.com/mikejavier" target="_blank">
+          @mikejavier
+        </a>
+      </li>
+      <li>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/mikejavier" target="_blank">
+          @mikejavier ({{ $t('aboutPage.tooLongDontReadBlock.linkedinAlert') }})
+        </a>
+      </li>
+      <li>
+        <strong>Instagram:</strong>
+        <a href="https://www.instagram.com/_mikejavier/" target="_blank">
+          @_mikejavier ({{
+            $t('aboutPage.tooLongDontReadBlock.instagramAlert')
+          }})
+        </a>
+      </li>
+    </ul>
+    <div class="notification is-warning is-light">
+      {{ $t('aboutPage.tooLongDontReadBlock.alertMessage') }}
+    </div>
+  </div>
+</template>

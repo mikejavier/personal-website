@@ -4,7 +4,7 @@
       {{ $t('aboutPage.tooLongDontReadBlock.title') }}
     </h1>
     <p>
-      {{ $t('aboutPage.tooLongDontReadBlock.firstParagraph') }}
+      {{ $t('aboutPage.tooLongDontReadBlock.firstParagraph', { age: getAge }) }}
     </p>
     <i18n path="aboutPage.tooLongDontReadBlock.secondParagraph" tag="p">
       <template v-slot:mail>
@@ -14,7 +14,9 @@
     <ul>
       <li>
         <strong>E-mail:</strong>
-        <span>contato[at]michaelsantilla[dot]com</span>
+        <span>
+          contato[at]michaelsantilla[dot]com
+        </span>
       </li>
       <li>
         <strong>Mastodon:</strong>
@@ -74,3 +76,13 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  computed: {
+    getAge() {
+      const today = new Date()
+      return today.getFullYear() - 1992
+    }
+  }
+}
+</script>

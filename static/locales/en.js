@@ -18,7 +18,7 @@ const aboutPage = {
     secondParagraph:
       'Which is very gratifying since everything today is on the internet, isn\'t it? And speaking of the Internet... I got all my knowledge about technology and programming from the Internet. Since I did not attend any college and have no "training" in the area. ',
     thirdParagraph:
-      "So my profession is a way to give back to the internet all the achievements I have obtained through it, that's why I am ENTHUSIASTE about open source software and online privacy. Two important pillars that in my opinion avoid the centralization of knowledge and manipulation of information which is exactly the opposite of the purpose of the web."
+      "So my profession is a way to give back to the internet all the achievements I have obtained through it, that's why I am ENTHUSIAST about open source software and online privacy. Two important pillars that in my opinion avoid the centralization of knowledge and manipulation of information which is exactly the opposite of the purpose of the web."
   },
   skillsBlock: {
     title: 'Skills',

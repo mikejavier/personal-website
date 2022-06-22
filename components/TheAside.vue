@@ -24,14 +24,14 @@
         <span>Blog</span>
       </a>
       <a
-        href="https://social.michaelsantillan.com/@mikejavier.rss"
+        href="https://social.michaelsantillan.com/users/mikejavier/feed.atom"
         target="_blank"
         class="button"
       >
         <span class="icon is-small">
           <i class="fas fa-rss"></i>
         </span>
-        <span>Mastodon</span>
+        <span>Fediverse</span>
       </a>
     </p>
     <hr />

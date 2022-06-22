@@ -19,10 +19,10 @@
         </span>
       </li>
       <li>
-        <strong>Mastodon:</strong>
+        <strong>Fediverse:</strong>
         <a
           rel="me"
-          href="https://social.michaelsantillan.com/@mikejavier"
+          href="https://social.michaelsantillan.com/mikejavier"
           target="_blank"
           >@mikejavier@social.michaelsantillan.com</a
         >

@@ -3,11 +3,11 @@ title: Preciso realmente me preocupar com a minha privacidade online?
 category: privacy
 language: pt
 tags:
-- privacy
-- open-source
-  summary: Não é porque você não tem nada a esconder que não deveria levar sua privacidade online a sério.  A não ser que você também não se importe com sua segurança e sua vida financeira.
-  createdAt: 2022-07-18
-  updatedAt: 2022-07-18
+  - privacy
+  - open-source
+summary: Não é porque você não tem nada a esconder que não deveria levar sua privacidade online a sério.  A não ser que você também não se importe com sua segurança e sua vida financeira.
+createdAt: 2022-07-18
+updatedAt: 2022-07-18
 ---
 
 A privacidade é um direito humano fundamental e assim como os outros direitos, temos a obrigação de proteger. No mundo digital a privacidade online é o direito de escolha que nós usuários temos de compartilhar ou não os nossos dados.
@@ -18,7 +18,7 @@ Antes de começar o assunto é bom deixar claro que privacidade é diferente do 
 
 > "Arguing that you don’t care about the right to privacy because you have nothing to hide is no different than saying you don’t care about free speech because you have nothing to say."
 >
->   Edward Snowden
+> Edward Snowden
 
 Não é porque você não tem nada a esconder que não deveria levar sua privacidade online a sério.  A não ser que você também não se importe com sua segurança e sua vida financeira.
 
@@ -55,7 +55,7 @@ Algumas ferramentas e métodos usado no OSINT são:
   É um método para buscar e coletar informações, você pode conhecer mais nesse nosso artigo: Usando Google Hacking para testes de invasão
 
 - OSINT Framework
-  Disponível em https://osintframework.com/ é um “mapa mental” que pode ajudar encontrar fontes para buscar informações.
+  Disponível em [https://osintframework.com](https://osintframework.com) é um “mapa mental” que pode ajudar encontrar fontes para buscar informações.
 
 - Maltego
   Uma ferramenta de coleta que pode ser encontrada já nos sistemas operacionais de Pentest, como Kali Linux e Parrot Security.
@@ -94,17 +94,3 @@ Vamos agora para o nível básico de privacidade:
 - Remova os metadados dos seus arquivos (há pessoas que nem sabem da existências deste tipo de informação). Metadados são informações simples presente em todo e qualquer arquivo presente digital (foto, pdf, word, etc), ou seja, ao criar um novo documento de texto por exemplo, será possível saber vários detalhes através dos metadados, como quem o criou, onde, quando e por aí vai. Em imagens, essas informações podem conter o equipamento usado e, em alguns casos, até mesmo a localização exata daquele registro. [Mat2](https://0xacab.org/jvoisin/mat2) é um cli que ajuda a remover esse tipo de informação.
 
 Privacidade é um assunto complexo, e proteger a sua no mundo digital é mais uma mudança de comportamento e hábitos do que troca de programas. Mas seguindo algumas das recomendações que listei acima você já vai estar fora do radar de muitos trackers. Pretendo continuar trazendo mais posts sobre o assunto e enquanto isso eu  encorajo você a continuar pesquisando e quem sabe tomar medidas mais radicais como deletar todas suas redes sociais, usar sistemas operacionais mais privativos e até só usar dinheiro como forma de pagamento.
-
-
-
-
-
-
-
-
-
-
-
-
-
-

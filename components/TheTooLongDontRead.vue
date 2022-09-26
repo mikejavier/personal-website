@@ -15,8 +15,9 @@
       <li>
         <strong>E-mail:</strong>
         <span>
-          contato[at]michaelsantilla[dot]com
+          contato[at]michaelsantillan[dot]com
         </span>
+        <small>(<nuxt-link :to="localePath('/pubkey')">GPG</nuxt-link>)</small>
       </li>
       <li>
         <strong>Fediverse:</strong>

@@ -138,5 +138,7 @@ export default {
   footerMessage: 'Feito com {vue}, {nuxt}, {bulma} e {heart}',
   notFoundPage: {
     message: 'Ei, olha quem se perdeu...'
-  }
+  },
+  pubkeyPage:
+    'Se você nunca ouviu falar em PGP, saiba que é um método de proteção da comunicação com criptografia de ponta a ponta que impede a leitura de e-mails por terceiros, incluindo seu provedor de e-mail.'
 }

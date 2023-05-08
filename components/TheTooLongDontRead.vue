@@ -63,14 +63,6 @@
           @mikejavier ({{ $t('aboutPage.tooLongDontReadBlock.linkedinAlert') }})
         </a>
       </li>
-      <li>
-        <strong>Instagram:</strong>
-        <a href="https://www.instagram.com/_mikejavier/" target="_blank">
-          @_mikejavier ({{
-            $t('aboutPage.tooLongDontReadBlock.instagramAlert')
-          }})
-        </a>
-      </li>
     </ul>
     <div class="notification is-warning is-light">
       {{ $t('aboutPage.tooLongDontReadBlock.alertMessage') }}

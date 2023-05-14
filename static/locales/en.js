@@ -2,7 +2,7 @@ const aboutPage = {
   tooLongDontReadBlock: {
     title: 'TL;DR',
     firstParagraph:
-      'My name is Michael Santillán, born in Ecuador, I am {age} years old and currently living in Brazil. I work with web development which allows me to create anything that works on the WWW. I am an open source software and online privacy enthusiast, and in my spare time I like to play sports and spend time with my family.',
+      'Hello everyone! My name is Michael Santillán and I work as a software developer. My routine involves leading teams of professionals in the area and managing projects that seek innovative solutions. Always looking for new challenges and learning, I am starting a new journey with this blog to share my passions, experiences and reflections, both in my professional and personal life.',
     secondParagraph:
       'You can contact me {mail} or using some of the means below',
     thirdParagraph: 'and find me on some platforms',
@@ -12,13 +12,25 @@ const aboutPage = {
       'Attention, if you find me in any other platform that is not in the list it is because I do not use it anymore and forgot to delete it or it is not me.'
   },
   aboutMeBlock: {
-    title: 'Who I am',
+    title: 'The Plan',
     firstParagraph:
-      'My name is Michael Santillán, born in Ecuador, I am {age} years old and currently live in Brazil. I am a software engineer focused on web technologies, i.e. I work making applications, websites or anything else that works on the World Wide Web, also known as "www".',
+      "My journey in technology has been an amazing one, with countless opportunities to explore new ideas and build amazing things. Over the years, I've worked on a variety of projects, learning new skills and making meaningful contributions. Here on the blog, I plan to share the knowledge I've gained, discuss current trends, and explore new ideas in technology.",
     secondParagraph:
-      'Which is very gratifying since everything today is on the internet, isn\'t it? And speaking of the Internet... I got all my knowledge about technology and programming from the Internet. Since I did not attend any college and have no "training" in the area. ',
+      "In addition, I will talk about my career, sharing tips and advice on how to navigate the world of software development. I want this blog to be a source of inspiration for other developers, showing that the road to career success doesn't have to be lonely or confusing.",
     thirdParagraph:
-      "So my profession is a way to give back to the internet all the achievements I have obtained through it, that's why I am ENTHUSIAST about open source software and online privacy. Two important pillars that in my opinion avoid the centralization of knowledge and manipulation of information which is exactly the opposite of the purpose of the web."
+      'The topics covered will not only be about technology and career. I firmly believe that we are more than our jobs, which is why I want to share other facets of my life.',
+    fourthParagraph:
+      'I am an avid reader and movie fan, so be prepared for book recommendations and movie reviews that have touched me in some way. I believe that art - whether in the form of literature, film or otherwise - can teach us a lot about ourselves and the world around us.',
+    fifthParagraph: 
+      'Personal development is another area that I would like to address in this blog. I want to talk about my journey of self-knowledge, my strategies for maintaining work-life balance, and how I find motivation and inspiration.',
+    sixthParagraph: 
+      'And, of course, I will share a bit about my travels. Traveling is one of my great passions. It is an amazing way to learn about different cultures and expand our perspective of the world.',
+    seventhParagraph: 
+      'In short, you will find here everything that reflects who I am: a software developer with a variety of interests and passions. I hope that by sharing my experiences I can inspire others, start interesting conversations, and maybe even meet new people along the way.',
+    eighthParagraph: 
+      'Thank you for joining me on this journey. I look forward to sharing my world with you!',
+    ninthParagraph: 
+      'Welcome to all of you!'
   },
   skillsBlock: {
     title: 'Skills',
@@ -88,7 +100,7 @@ const aboutPage = {
 export default {
   here: 'here',
   welcome: 'welcome',
-  aboutMe: 'About me',
+  aboutMe: 'About',
   contact: 'contact',
   read: 'read',
   english: 'english',

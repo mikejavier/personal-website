@@ -1,3 +1,16 @@
+---
+title: Os motivos pessoais que me levaram a deletar minhas contas das principais redes sociais
+category: privacy-online
+language: pt
+tags:
+  - privacy
+  - indieweb
+  - web3.0
+summary: Deletar minhas contas não foi uma decisão repentina ou impensada, mas sim o resultado de um crescente desconforto e descontentamento com o papel que as plataformas que monopolizam a internet desempenhavam na minha vida.
+createdAt: 2023-05-16
+updatedAt: 2023-05-16
+---
+
 Sem dúvida alguma oo longo da última década, as redes sociais se tornaram uma parte fundamental da nossa vida cotidiana. Seja para se conectar com amigos e familiares, compartilhar nossas experiências ou se atualizar sobre as notícias, usamos essas plataformas todos os dias.
 
 Eu já passei horas rolando pelo Facebook, twittando pensamentos aleatórios e buscando o angulo perfeito para o Instagram. Em 2023 fazem cinco anos desde que tomei a decisão de deletar minhas contas do Facebook e Twitter e um ano a conta do Instagram (depois de 2 anos com a conta desabilitada). Hoje, olhando para trás, vejo que foi um dos passos mais libertadores e transformadores que já dei.

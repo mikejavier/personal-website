@@ -1,16 +1,16 @@
 <template>
   <aside class="aside p-5" :class="{ open: isOpen }">
-    <figure class="image is-128x128" style="margin-bottom: 1rem">
+    <figure class="image">
       <img
         class="is-rounded"
-        src="~/assets/images/photo.jpeg"
+        src="~/assets/images/ms-logo-site.png"
         alt="Michael Santillán photo"
       />
     </figure>
     <h1 class="has-text-weight-medium is-size-4">
       Michael Santillán
     </h1>
-<!-- <h2 class="has-text-grey-light has-text-weight-normal is-size-5">
+    <!-- <h2 class="has-text-grey-light has-text-weight-normal is-size-5">
       {{ $t('profession') }}
     </h2> -->
     <br />
@@ -167,5 +167,10 @@ export default {
 
 .aside.open {
   transform: translateX(0);
+}
+
+.aside .image {
+  width: 180px;
+  height: 180px;
 }
 </style>

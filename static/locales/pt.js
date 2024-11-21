@@ -113,7 +113,7 @@ export default {
   readMore: 'Ler mais',
   findAnArticle: 'encontre um artigo',
   profileDescription:
-    'Nascido no Equador, amante do código e um entusiasta da privacidade online e do software de código aberto ',
+    'Líder de equipe de TI, explorador de tecnologia, entusiasta de viagens, defensor da privacidade on-line, apoiador de código aberto e buscador de novas experiências.',
   aboutPage,
   contactPage: {
     title: 'Vamos construir algo juntos!',

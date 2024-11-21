@@ -1,5 +1,5 @@
 <template>
   <div class="content">
-    <the-too-long-dont-read />
+    <the-about-me />
   </div>
 </template>

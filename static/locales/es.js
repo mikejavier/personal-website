@@ -111,7 +111,7 @@ export default {
   readMore: 'Leer más',
   findAnArticle: 'encontrar un artículo',
   profileDescription:
-    'Nacido en Ecuador, amante del código y entusiasta de la privacidad en línea y el software de código abierto',
+    'Líder de equipo de TI, explorador de la tecnología, entusiasta de los viajes, defensor de la privacidad en línea, colaborador del código abierto y buscador de nuevas experiencias.',
   aboutPage,
   contactPage: {
     title: '¡Construyamos algo juntos!',

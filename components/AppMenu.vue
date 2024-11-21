@@ -3,6 +3,11 @@
     <ul class="menu-list">
       <li class="is-capitalized">
         <nuxt-link exactActiveClass="is-active" :to="localePath('/')" exact>{{
+          $t('welcome')
+        }}</nuxt-link>
+      </li>
+      <li class="is-capitalized">
+        <nuxt-link exactActiveClass="is-active" :to="localePath('/about')" exact>{{
           $t('aboutMe')
         }}</nuxt-link>
       </li>

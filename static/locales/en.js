@@ -111,7 +111,7 @@ export default {
   readMore: 'Read more',
   findAnArticle: 'find an article',
   profileDescription:
-    'Born in Ecuador, code lover and an enthusiast for online privacy and open-source software ',
+    'Tech team leader, explorer of technology, travel enthusiast, online privacy advocate, open-source supporter, and seeker of new experiences.',
   aboutPage,
   contactPage: {
     title: "Let's build something together!",

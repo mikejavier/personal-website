@@ -10,9 +10,9 @@
     <h1 class="has-text-weight-medium is-size-4">
       Michael Santillán
     </h1>
-    <h2 class="has-text-grey-light has-text-weight-normal is-size-5">
+    <!-- <h2 class="has-text-grey-light has-text-weight-normal is-size-5">
       {{ $t('profession') }}
-    </h2>
+    </h2> -->
     <br />
     <p>{{ $t('profileDescription') }}</p>
     <hr />

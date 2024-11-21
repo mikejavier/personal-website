@@ -3,7 +3,7 @@
     <figure class="image">
       <img
         class="is-rounded"
-        src="~/assets/images/ms-logo-site.png"
+        src="~/assets/images/ms-avatar.png"
         alt="Michael Santillán photo"
       />
     </figure>

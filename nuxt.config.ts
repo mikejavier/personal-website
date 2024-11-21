@@ -87,8 +87,8 @@ export default defineNuxtConfig({
           property: 'og:site_name',
           content: 'Michael Santillán - Software Engineer'
         },
-        { property: 'og:image', content: '/site_shared.png' },
-        { name: 'twitter:card', content: 'summary_large_image' },
+        { property: 'og:image', content: '/website-share-card.jpg' },
+        { name: 'twitter:card', content: '/website-share-card.jpg' },
         {
           name: 'google-site-verification',
           content: 'BgpI-6B9mNjw2qYXUz0Q7VnTuEr-bi9hmnuK4rBnBaA'

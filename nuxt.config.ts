@@ -1,5 +1,3 @@
-import locales from './static/locales'
-
 let posts = []
 
 const createSitemapRoutes = async () => {
@@ -156,7 +154,7 @@ export default defineNuxtConfig({
           content:
             'Software Engineer and an enthusiast for online privacy and open-source software'
         },
-        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
         { name: 'apple-mobile-web-app-title', content: 'Michael Santillán' },
         {

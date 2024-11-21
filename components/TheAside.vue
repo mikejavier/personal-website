@@ -10,9 +10,9 @@
     <h1 class="has-text-weight-medium is-size-4">
       Michael Santillán
     </h1>
-    <!-- <h2 class="has-text-grey-light has-text-weight-normal is-size-5">
+    <h2 class="has-text-grey-light has-text-weight-normal is-size-5">
       {{ $t('profession') }}
-    </h2> -->
+    </h2>
     <br />
     <p>{{ $t('profileDescription') }}</p>
     <br />
@@ -50,7 +50,7 @@
             <span class="icon is-small">
               <i class="fas fa-globe" aria-hidden="true"></i>
             </span>
-            <span>{{ selectedLocale }}</span>
+            <span>{{ $t(selectedLocaleLabel) }}</span>
           </button>
         </div>
         <div id="dropdown-menu" class="dropdown-menu" role="menu">
@@ -58,9 +58,9 @@
             <nuxt-link
               v-for="locale in availableLocales"
               :key="locale.code"
-              
+              :to="switchLocalePath(locale.code)"
               class="dropdown-item is-capitalized"
-              :class="{ 'is-active': locale.code === selectedLocale }"
+              :class="{ 'is-active': locale.label === selectedLocaleLabel }"
               exact
             >
               {{ $t(locale.label) }}
@@ -73,7 +73,7 @@
     <div class="content">
       <p>Michael Santillán © {{ getCurrentYear }}</p>
       <p>
-        <i18n path="footerMessage" tag="small">
+        <i18n-t keypath="footerMessage" tag="small" scope="global">
           <template v-slot:vue>
             <a href="https://vuejs.org/" target="_blank">Vue</a>
           </template>
@@ -86,58 +86,32 @@
           <template v-slot:heart>
             <i class="fa fa-heart"></i>
           </template>
-        </i18n>
+        </i18n-t>
       </p>
     </div>
   </aside>
 </template>
 
-<script>
-import AppMenu from '@/components/AppMenu'
+<script setup lang="ts">
+import { computed } from "vue";
 
-export default {
-  components: {
-    AppMenu
-  },
+const { locales, localeProperties } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
-  props: {
-    isOpen: {
-      type: Boolean,
-      require: true
-    }
-  },
+const props = defineProps<{
+  isOpen: boolean
+}>()
 
-  computed: {
-    availableLocales() {
-      const locales = this.$i18n.locales.filter(
-        ({ code }) => code !== this.$i18n.locale
-      )
-
-      return locales.map(({ code, label }) => ({
-        code,
-        label
-      }))
-    },
-
-    getCurrentYear() {
-      const today = new Date()
-      return today.getFullYear()
-    },
-
-    selectedLocale() {
-      const currentLocale = this.$i18n.locales.find(
-        ({ code }) => this.$i18n.locale === code
-      )
-
-      return this.$t(currentLocale.label)
-    }
-  }
-}
+const availableLocales = computed(() => locales.value.map(({ code, label }) => ({
+    code,
+    label
+  })));
+const getCurrentYear = computed(() => new Date().getFullYear());
+const selectedLocaleLabel = computed(() => localeProperties.value.label);
 </script>
 
 <style scoped lang="scss">
 .aside {
-  background-color: #fff;
   width: 100%;
   max-width: 260px;
   position: fixed;

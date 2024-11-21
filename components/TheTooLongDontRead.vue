@@ -4,13 +4,13 @@
       {{ $t('aboutPage.tooLongDontReadBlock.title') }}
     </h1>
     <p>
-      {{ $t('aboutPage.tooLongDontReadBlock.firstParagraph', { age: getAge }) }}
+      {{ $t('aboutPage.tooLongDontReadBlock.firstParagraph') }}
     </p>
-    <i18n path="aboutPage.tooLongDontReadBlock.secondParagraph" tag="p">
+    <i18n-t keypath="aboutPage.tooLongDontReadBlock.secondParagraph" tag="p" scope="global">
       <template v-slot:mail>
         <nuxt-link :to="localePath('/contact')">{{ $t('here') }}</nuxt-link>
       </template>
-    </i18n>
+    </i18n-t>
     <ul>
       <li>
         <strong>E-mail:</strong>
@@ -69,13 +69,6 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  computed: {
-    getAge() {
-      const today = new Date()
-      return today.getFullYear() - 1992
-    }
-  }
-}
+<script setup>
+const localePath = useLocalePath()
 </script>

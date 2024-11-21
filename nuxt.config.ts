@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   ],
   site: { 
     url: 'https://michaelsantillan.com', 
-    name: 'Michael Santillán - Software Engineer' 
+    name: 'Michael Santillán - Tech team leader' 
   }, 
   i18n: {
     baseUrl: 'https://michaelsantillan.com',
@@ -47,7 +47,7 @@ export default defineNuxtConfig({
    */
   app:{
     head: {
-      title: 'Michael Santillán - Software Engineer',
+      title: 'Michael Santillán - Tech team leader',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -55,7 +55,7 @@ export default defineNuxtConfig({
           hid: 'description',
           name: 'description',
           content:
-            'Software Engineer and an enthusiast for online privacy and open-source software'
+            'explorer of technology, travel enthusiast, online privacy advocate, open-source supporter, and seeker of new experiences.'
         },
         { name: 'mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
@@ -75,17 +75,17 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         {
           property: 'og:title',
-          content: 'Michael Santillán - Software Engineer'
+          content: 'Michael Santillán - Tech team leader'
         },
         {
           property: 'og:description',
           content:
-            'Software Engineer and an enthusiast for online privacy and open-source software'
+            'explorer of technology, travel enthusiast, online privacy advocate, open-source supporter, and seeker of new experiences.'
         },
         { property: 'og:url', content: 'https://www.michaelsantillan.com' },
         {
           property: 'og:site_name',
-          content: 'Michael Santillán - Software Engineer'
+          content: 'Michael Santillán - Tech team leader'
         },
         { property: 'og:image', content: '/website-share-card.jpg' },
         { name: 'twitter:card', content: '/website-share-card.jpg' },

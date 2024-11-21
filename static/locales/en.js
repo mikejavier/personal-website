@@ -2,7 +2,7 @@ const aboutPage = {
   tooLongDontReadBlock: {
     title: 'TL;DR',
     firstParagraph:
-      'Hello everyone! My name is Michael Santillán and I work as a software developer. My routine involves leading teams of professionals in the area and managing projects that seek innovative solutions. Always looking for new challenges and learning, I am starting a new journey with this blog to share my passions, experiences and reflections, both in my professional and personal life.',
+      'Hello everyone! My name is Michael Santillán and I work as a tech team leader. My routine involves leading teams of professionals in the area and managing projects that seek innovative solutions. Always looking for new challenges and learning, I am starting a new journey with this blog to share my passions, experiences and reflections, both in my professional and personal life.',
     secondParagraph:
       'You can contact me using some of the means below',
     thirdParagraph: 'and find me on some platforms',
@@ -26,7 +26,7 @@ const aboutPage = {
     sixthParagraph: 
       'And, of course, I will share a bit about my travels. Traveling is one of my great passions. It is an amazing way to learn about different cultures and expand our perspective of the world.',
     seventhParagraph: 
-      'In short, you will find here everything that reflects who I am: a software developer with a variety of interests and passions. I hope that by sharing my experiences I can inspire others, start interesting conversations, and maybe even meet new people along the way.',
+      'In short, you will find here everything that reflects who I am: a tech team leader with a variety of interests and passions. I hope that by sharing my experiences I can inspire others, start interesting conversations, and maybe even meet new people along the way.',
     eighthParagraph: 
       'Thank you for joining me on this journey. I look forward to sharing my world with you!',
     ninthParagraph: 
@@ -42,7 +42,7 @@ export default {
   english: 'english',
   portuguese: 'portuguese',
   spanish: 'spanish',
-  profession: 'Software Engineer',
+  profession: 'Tech team leader',
   profileDescription:
     'Tech team leader, explorer of technology, travel enthusiast, online privacy advocate, open-source supporter, and seeker of new experiences.',
   aboutPage,

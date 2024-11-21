@@ -2,7 +2,7 @@ const aboutPage = {
   tooLongDontReadBlock: {
     title: 'TL;DR',
     firstParagraph:
-      '¡Hola a todos! Mi nombre es Michael Santillán y trabajo como desarrollador de software. Mi rutina implica liderar equipos de profesionales en el área y gestionar proyectos que buscan soluciones innovadoras. Siempre en busca de nuevos retos y aprendizajes, inicio una nueva etapa con este blog para compartir mis pasiones, experiencias y reflexiones, tanto en la vida profesional como personal.',
+      '¡Hola a todos! Mi nombre es Michael Santillán y trabajo como líder de equipo de tecnología. Mi rutina implica liderar equipos de profesionales en el área y gestionar proyectos que buscan soluciones innovadoras. Siempre en busca de nuevos retos y aprendizajes, inicio una nueva etapa con este blog para compartir mis pasiones, experiencias y reflexiones, tanto en la vida profesional como personal.',
     secondParagraph:
       'Puede ponerse en contacto conmigo utilizando algunos de los medios siguientes',
     thirdParagraph: 'y encontrarme en algunas plataformas',
@@ -26,7 +26,7 @@ const aboutPage = {
     sixthParagraph: 
       'Y, por supuesto, compartiré un poco sobre mis viajes. Viajar es una de mis grandes pasiones. Es una forma increíble de conocer culturas diferentes y ampliar nuestra perspectiva del mundo.',
     seventhParagraph: 
-      'En resumen, aquí encontrarás todo lo que refleja quién soy: un desarrollador de software con una gran variedad de intereses y pasiones. Espero que al compartir mis experiencias pueda inspirar a otros, iniciar conversaciones interesantes y quizá incluso conocer gente nueva por el camino.',
+      'En resumen, aquí encontrarás todo lo que refleja quién soy: un líder de equipo de tecnología con una gran variedad de intereses y pasiones. Espero que al compartir mis experiencias pueda inspirar a otros, iniciar conversaciones interesantes y quizá incluso conocer gente nueva por el camino.',
     eighthParagraph: 
       'Gracias por acompañarme en este viaje. Estoy deseando compartir mi mundo con vosotros.',
     ninthParagraph: 
@@ -42,7 +42,7 @@ export default {
   english: 'inglés',
   portuguese: 'portugués',
   spanish: 'español',
-  profession: 'Ingeniero de software',
+  profession: 'Líder de equipo de tecnología',
   profileDescription:
     'Líder de equipo de TI, explorador de la tecnología, entusiasta de los viajes, defensor de la privacidad en línea, colaborador del código abierto y buscador de nuevas experiencias.',
   aboutPage,

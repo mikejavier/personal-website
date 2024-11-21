@@ -4,7 +4,7 @@ const aboutPage = {
     firstParagraph:
       'Hello everyone! My name is Michael Santillán and I work as a software developer. My routine involves leading teams of professionals in the area and managing projects that seek innovative solutions. Always looking for new challenges and learning, I am starting a new journey with this blog to share my passions, experiences and reflections, both in my professional and personal life.',
     secondParagraph:
-      'You can contact me {mail} or using some of the means below',
+      'You can contact me using some of the means below',
     thirdParagraph: 'and find me on some platforms',
     linkedinAlert: 'Little use! Only for visibility in professional life',
     instagramAlert: 'Little use! Only for following friends and family',

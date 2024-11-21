@@ -1,116 +1,21 @@
-let posts = []
-
-const createSitemapRoutes = async () => {
-  let routes = []
-  const { $content } = require('@nuxt/content')
-  if (posts === null || posts.length === 0)
-    posts = await $content('articles')
-      .sortBy('createdAt', 'desc')
-      .fetch()
-  for (const post of posts) {
-    routes.push(`blog/${post.slug}`)
-  }
-  return routes
-}
-
-const constructFeedItem = (post, dir, hostname) => {
-  const url = `${hostname}/${dir}/${post.slug}`
-  return {
-    title: post.title,
-    id: url,
-    link: url,
-    description: post.summary,
-    content: post.bodyPlainText
-  }
-}
-
-const create = async (feed, args) => {
-  const [filePath, ext] = args
-  const hostname =
-    process.env.NODE_ENV === 'production'
-      ? 'https://michaelsantillan.com'
-      : 'http://localhost:3000'
-  feed.options = {
-    title: 'Blog - Michael Santillán',
-    description: 'The list of Michael Santillán Stuff!',
-    link: `${hostname}/feed.${ext}`
-  }
-  const { $content } = require('@nuxt/content')
-  if (posts === null || posts.length === 0)
-    posts = await $content(filePath)
-      .sortBy('createdAt', 'desc')
-      .fetch()
-
-  for (const post of posts) {
-    const feedItem = await constructFeedItem(post, filePath, hostname)
-    feed.addItem(feedItem)
-  }
-  return feed
-}
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   ssr: false,
-
   target: 'static',
-
   router: {
     linkActiveClass: 'is-active',
     linkExactActiveClass: 'is-active'
   },
-
-  plugins: ['~/plugins/filters.js'],
-
   modules: [
-    '@nuxt/content',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap'
   ],
-
-  feed: [
-    {
-      path: '/feed.xml',
-      create,
-      cacheTime: 1000 * 60 * 15,
-      type: 'rss2',
-      data: ['articles', 'xml']
-    }
-  ],
-
-  sitemap: {
-    hostname:
-      process.env.NODE_ENV === 'production'
-        ? 'https://michaelsantillan.com'
-        : 'http://localhost:3000',
-    i18n: true,
-    gzip: true,
-    routes: createSitemapRoutes
-  },
-
-  hooks: {
-    'content:file:beforeInsert': document => {
-      if (document.extension === '.md') {
-        const readingTime = Math.ceil(
-          require('reading-time')(document.text).minutes.toFixed(2)
-        )
-
-        document.readingTime = `${readingTime} min`
-        document.bodyPlainText = document.text
-      }
-    }
-  },
-
-  content: {
-    markdown: {
-      prism: {
-        theme: 'prism-themes/themes/prism-dracula.css'
-      }
-    },
-    fullTextSearchFields: ['title', 'slug']
-  },
-
+  site: { 
+    url: 'https://michaelsantillan.com', 
+    name: 'Michael Santillán - Software Engineer' 
+  }, 
   i18n: {
     baseUrl: 'https://michaelsantillan.com',
     seo: true,
@@ -132,11 +37,9 @@ export default defineNuxtConfig({
       }
     ],
     defaultLocale: 'en',
+    legacy: false,
+    fallbackLocale: 'en',
     vueI18n: './i18n.options.ts'
-    // vueI18n: {
-    //   fallbackLocale: 'en',
-    //   messages: locales
-    // }
   },
 
   /*
@@ -236,26 +139,9 @@ export default defineNuxtConfig({
       ]
     }
   },
+  
   /*
    ** Customize the progress-bar color
    */
   loading: { color: '#0088CC' },
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** Run ESLINT on save
-     */
-    extend(config, ctx) {
-      if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
 })

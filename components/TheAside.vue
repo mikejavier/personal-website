@@ -15,25 +15,6 @@
     </h2>
     <br />
     <p>{{ $t('profileDescription') }}</p>
-    <br />
-    <p class="buttons">
-      <a href="/feed.xml" target="_blank" class="button">
-        <span class="icon is-small">
-          <i class="fas fa-rss"></i>
-        </span>
-        <span>Blog</span>
-      </a>
-      <a
-        href="https://social.michaelsantillan.com/users/mikejavier/feed.atom"
-        target="_blank"
-        class="button"
-      >
-        <span class="icon is-small">
-          <i class="fas fa-rss"></i>
-        </span>
-        <span>Fediverse</span>
-      </a>
-    </p>
     <hr />
     <div class="block">
       <app-menu />
@@ -43,7 +24,7 @@
       <div class="dropdown is-hoverable is-up">
         <div class="dropdown-trigger">
           <button
-            class="button is-capitalized is-white"
+            class="button is-capitalized  is-small"
             aria-haspopup="true"
             aria-controls="dropdown-menu"
           >
@@ -93,8 +74,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-
 const { locales, localeProperties } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 

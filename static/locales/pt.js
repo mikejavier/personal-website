@@ -4,7 +4,7 @@ const aboutPage = {
     firstParagraph:
       'Olá a todos! Me chamo Michael Santillán e trabalho como desenvolvedor de software. A minha rotina envolve liderar times de profissionais da área e gerenciar projetos que buscam soluções inovadoras. Sempre em busca de novos desafios e aprendizados, estou iniciando uma nova jornada com este blog para compartilhar minhas paixões, experiências e reflexões, tanto na minha vida profissional quanto pessoal.',
     secondParagraph:
-      'Você pode entrar em contato comigo por {mail} ou usando alguns do meios abaixo',
+      'Você pode entrar em contato comigo usando alguns do meios abaixo',
     thirdParagraph: 'e me encontrar em algumas plataformas',
     linkedinAlert: 'Pouco uso! Somente para visibilidade da vida profissional',
     instagramAlert: 'Pouco uso! Somente para seguir amigos e família',

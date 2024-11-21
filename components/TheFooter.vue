@@ -24,13 +24,6 @@
   </footer>
 </template>
 
-<script>
-export default {
-  computed: {
-    getCurrentYear() {
-      const today = new Date()
-      return today.getFullYear()
-    }
-  }
-}
+<script setup lang="ts">
+const getCurrentYear = computed(() => new Date().getFullYear());
 </script>

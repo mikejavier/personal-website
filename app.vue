@@ -16,15 +16,7 @@
 </template>
 
 <script>
-// import TheAside from '@/components/TheAside'
-// import TheMain from '@/components/TheMain'
-
 export default {
-  // components: {
-  //   TheAside,
-  //   TheMain
-  // },
-
   data() {
     return {
       menuIsOpen: false

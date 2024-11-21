@@ -6,27 +6,24 @@
     <p>
       {{ $t('aboutPage.tooLongDontReadBlock.firstParagraph') }}
     </p>
-    <i18n-t keypath="aboutPage.tooLongDontReadBlock.secondParagraph" tag="p" scope="global">
-      <template v-slot:mail>
-        <nuxt-link :to="localePath('/contact')">{{ $t('here') }}</nuxt-link>
-      </template>
-    </i18n-t>
+    <p>
+      {{ $t('aboutPage.tooLongDontReadBlock.secondParagraph') }}
+    </p>
     <ul>
       <li>
         <strong>E-mail:</strong>
         <span>
-          contato[at]michaelsantillan[dot]com
+          hi[at]michaelsantillan[dot]com
         </span>
         <small>(<nuxt-link :to="localePath('/pubkey')">GPG</nuxt-link>)</small>
       </li>
       <li>
-        <strong>Fediverse:</strong>
-        <a
+        <strong>Fediverse: </strong>
+        <nuxt-link
           rel="me"
-          href="https://social.michaelsantillan.com/mikejavier"
+          to="https://mastodon.social/@_mikejavier"
           target="_blank"
-          >@mikejavier@social.michaelsantillan.com</a
-        >
+          >@_mikejavier@mastodon.social</nuxt-link>
       </li>
     </ul>
     <p>
